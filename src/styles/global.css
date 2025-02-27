@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Quattrocento:wght@400;700&family=Satisfy&display=swap');
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --yellow: #FDC913;
+    --light-gray: #5F5F5F;
+    --dark-gray: #292929;
+    --red: #CE2829;
+    --dark-red: #A81F20;
+    --beige: #FAF7F2;
+
+    --font-primary: 'Roboto Condensed', sans-serif;
+    --font-secondary: 'Barlow', sans-serif;
+    --font-tertiary: 'Quattrocento', serif;
+    --font-cursive: 'Satisfy', cursive;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--beige);
+    color: var(--dark-gray);
+    margin: 0;
+    padding: 0;
+}
