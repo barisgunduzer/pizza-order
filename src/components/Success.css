@@ -12,19 +12,6 @@
     box-sizing: border-box;
 }
 
-.banner {
-    width: 100%;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner img {
-    max-width: 100%;
-    height: auto;
-}
-
 .message {
     flex-grow: 1; /* Boş alanı doldur */
     display: flex;

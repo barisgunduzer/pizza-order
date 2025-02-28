@@ -1,80 +1,110 @@
 .order-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #FAF7F2;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100vh; /* Tüm ekranı kapla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Başlık en üstte, mesaj ortada, footer en altta */
+    background-color: var(--white); /* Kırmızı arka plan */
+    color: black;
+    /*text-align: center;*/
+    /*padding: 20px;*/
+    /*box-sizing: border-box;*/
 }
-
-.header {
+.order-header {
     text-align: center;
     background-color: #CE2829;
-    padding: 20px;
-    border-radius: 8px 8px 0 0;
+    display: flex;
+    width: 100%;
     color: white;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
 }
 
 .breadcrumb {
     margin: 15px 0;
     font-size: 0.9rem;
     color: #5F5F5F;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+
 }
 
-.breadcrumb a {
-    text-decoration: none;
+.breadcrumb .highlight {
     color: #CE2829;
     font-weight: bold;
 }
 
-.breadcrumb span {
-    color: #5F5F5F;
-}
-
-.product-details h2 {
+.order-title {
     font-size: 1.8rem;
     font-family: "Quattrocento", serif;
     color: #292929;
 }
 
-.product-details .price {
+.order-price {
     font-size: 1.5rem;
     font-weight: bold;
     color: #CE2829;
 }
 
-.options, .toppings {
-    margin-top: 20px;
-    padding: 15px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.order-description {
+    font-size: 1rem;
+    color: #5F5F5F;
+    margin-bottom: 15px;
 }
 
-.options h3, .toppings h3 {
+.section-title {
     font-size: 1.2rem;
-    color: #292929;
     font-family: "Barlow", sans-serif;
+    color: #292929;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.options label, .toppings label {
-    display: block;
-    font-size: 1rem;
-    color: #5F5F5F;
-    margin: 5px 0;
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-textarea {
+.radio-label, .checkbox-label {
+    font-size: 1rem;
+    color: #5F5F5F;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.order-select, .order-textarea {
     width: 100%;
-    height: 80px;
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #5F5F5F;
     font-family: "Barlow", sans-serif;
+}
+
+.order-textarea {
+    height: 80px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.quantity-btn {
+    background: #CE2829;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.quantity-value {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .order-summary {
@@ -86,33 +116,12 @@ textarea {
     text-align: center;
 }
 
-.order-summary h3 {
+.summary-title {
     font-size: 1.5rem;
     color: #292929;
 }
 
-.order-summary p {
+.summary-details, .summary-total {
     font-size: 1.2rem;
     font-weight: bold;
-}
-
-.cta-button {
-    display: block;
-    width: 100%;
-    margin-top: 20px;
-    padding: 12px;
-    background-color: #FDC913;
-    color: #292929;
-    font-family: "Barlow", sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #CE2829;
-    color: white;
 }

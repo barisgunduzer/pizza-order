@@ -25,27 +25,6 @@
     margin-top: 10px;
 }
 
-.cta-button {
-    min-width: 100px;
-    min-height: 40px;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: var(--yellow);
-    color: var(--dark-gray);
-    font-family: "Barlow", sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.cta-button:hover {
-    background-color: var(--dark-red);
-    color: white;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .home-container {

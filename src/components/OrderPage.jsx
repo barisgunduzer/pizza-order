@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {Link, useNavigate} from "react-router-dom";
 import "./OrderPage.css";
+import logo from "../assets/logo.svg";
 
 //TODO: Layoutta tasarıma uymayan alanlar düzeltilecek
 const OrderPage = () => {
@@ -21,27 +22,31 @@ const OrderPage = () => {
 
     return (
         <div className="order-container">
-            <header className="header">
-                <h1>Teknolojik Yemekler</h1>
-            </header>
-
-            <nav className="breadcrumb">
-                <Link to="/">Ana Sayfa</Link> &gt; <span>Seçenekler</span> &gt; <strong>Sipariş Oluştur</strong>
-            </nav>
+            <div className="order-header">
+                <div className="banner">
+                    <img src={logo} alt="Teknolojik Yemekler Logo"/>
+                </div>
+                <nav className="breadcrumb">
+                    <Link to="/">Ana Sayfa</Link> &gt; <span>Seçenekler</span> &gt; <strong>Sipariş Oluştur</strong>
+                </nav>
+            </div>
 
             <div className="product-details">
                 <h2>Position Absolute Acı Pizza</h2>
                 <p className="price">85.50₺</p>
                 <p>
-                    Frontend dev’ler hala position:absolute kullanıyor...
+                Frontend dev’ler hala position:absolute kullanıyor...
                 </p>
             </div>
 
             <div className="options">
                 <h3>Boyut Seç *</h3>
-                <label><input type="radio" name="size" value="küçük" onChange={() => setSelectedSize("küçük")} /> Küçük</label>
-                <label><input type="radio" name="size" value="orta" onChange={() => setSelectedSize("orta")} /> Orta</label>
-                <label><input type="radio" name="size" value="büyük" onChange={() => setSelectedSize("büyük")} /> Büyük</label>
+                <label><input type="radio" name="size" value="küçük"
+                              onChange={() => setSelectedSize("küçük")}/> Küçük</label>
+                <label><input type="radio" name="size" value="orta"
+                              onChange={() => setSelectedSize("orta")}/> Orta</label>
+                <label><input type="radio" name="size" value="büyük"
+                              onChange={() => setSelectedSize("büyük")}/> Büyük</label>
             </div>
 
             <div className="options">
@@ -57,13 +62,14 @@ const OrderPage = () => {
                 <h3>Ek Malzemeler (En fazla 10)</h3>
                 {["Pepperoni", "Sosis", "Mısır", "Sucuk", "Ananas", "Jalapeno"].map((topping) => (
                     <label key={topping}>
-                        <input type="checkbox" checked={toppings.includes(topping)} onChange={() => handleToppingChange(topping)} />
+                        <input type="checkbox" checked={toppings.includes(topping)}
+                               onChange={() => handleToppingChange(topping)}/>
                         {topping}
                     </label>
                 ))}
             </div>
 
-            <textarea placeholder="Siparişe eklemek istediğiniz bir not var mı?" />
+            <textarea placeholder="Siparişe eklemek istediğiniz bir not var mı?"/>
 
             <div className="order-summary">
                 <h3>Sipariş Toplamı</h3>
